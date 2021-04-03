@@ -1,2 +1,2 @@
-# Edurekha
-All edurekha courses learning and practice
+# Edureka
+All edureka courses learning and practice
