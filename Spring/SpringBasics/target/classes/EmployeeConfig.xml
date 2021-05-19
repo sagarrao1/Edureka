@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->    
+      
+    <bean id="addrs" class="com.edurka.spring.domain.Address">
+    	<property name="street" value="Nizampet"/>
+    	<property name="city" value="Hyderabad"/>
+    	<property name="state" value="Telangana"/>
+    	<property name="pincode" value="500049"/>
+    </bean>
+    
+    <bean id="emp1" class="com.edurka.spring.domain.Employee" init-method="MyInitMethod" destroy-method="MyDestroyMethod">
+    	<property name="id" value="1"/>
+    	<property name="name" value="Sanju"/>
+    	<constructor-arg name="address" ref="addrs"/>
+    	<!-- <property name="address" ref="addrs"/> -->
+    </bean>
+
+  <!--   <bean id="emp2" class="com.edurka.spring.domain.Employee" >
+    	<property name="id" value="2"/>
+    	<property name="name" value="Sagar"/>
+    	<constructor-arg name="address" ref="addrs2"/>
+    </bean> -->
+
+</beans>

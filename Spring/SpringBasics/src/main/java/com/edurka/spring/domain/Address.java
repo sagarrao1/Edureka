@@ -7,6 +7,9 @@ public class Address {
 	private String state;
 	private String pincode;
 	
+	public Address() {
+		System.out.println("------Address Object created");
+	}
 	
 	public String getStreet() {
 		return street;
@@ -31,6 +34,11 @@ public class Address {
 	}
 	public void setPincode(String pincode) {
 		this.pincode = pincode;
+	}
+
+	@Override
+	public String toString() {
+		return "Address [street=" + street + ", city=" + city + ", state=" + state + ", pincode=" + pincode + "]";
 	}
 
 	
