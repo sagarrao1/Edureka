@@ -9,6 +9,8 @@ import org.springframework.core.io.Resource;
 
 import com.edurka.spring.domain.Address;
 import com.edurka.spring.domain.Employee;
+import com.edurka.spring.module.Book;
+import com.edurka.spring.module.EBook;
 
 public class App 
 {
@@ -28,13 +30,20 @@ public class App
 //        System.out.println( "emp : "+emp );
         
 
-        ApplicationContext context= new ClassPathXmlApplicationContext("EmployeeConfig.xml");
+        ApplicationContext context= new ClassPathXmlApplicationContext("spring-config.xml");
 //        Employee emp = (Employee) context.getBean("emp");
-        Employee emp1 = context.getBean("emp1", Employee.class);
-        System.out.println( "emp1 : "+emp1 );
+//        Employee emp1 = context.getBean("emp1", Employee.class);
+//        System.out.println( "emp1 : "+emp1 );
 
 //        Employee emp2 = context.getBean("emp2", Employee.class);
 //        System.out.println( "emp2 : "+emp2 );
+        
+//        Book book = context.getBean("book", Book.class);
+//        System.out.println(book);
+//        
+        EBook ebook = context.getBean("ebook", EBook.class);
+        System.out.println(ebook);
+        
         
         ClassPathXmlApplicationContext classPathXmlApplicationContext = (ClassPathXmlApplicationContext) context;
         classPathXmlApplicationContext.close();

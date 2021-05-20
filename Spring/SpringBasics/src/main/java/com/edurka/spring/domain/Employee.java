@@ -7,12 +7,12 @@ public class Employee {
 	private Address address;
 
 	public Employee() {
-		System.out.println("--- Employee Object created ----");
+//		System.out.println("--- Employee Object created ----");
 	}
 		
 //	Constructor injector
 	public Employee(Address address) {
-		System.out.println("Constructor injector method called");
+//		System.out.println("Constructor injector method called");
 		this.address = address;
 	}
 
@@ -35,7 +35,7 @@ public class Employee {
 	
 //	Setter Injector
 	public void setAddress(Address address) {
-		System.out.println("Setter Injector method called");
+//		System.out.println("Setter Injector method called");
 		this.address = address;
 	}
 	
@@ -46,11 +46,11 @@ public class Employee {
 	
 
 	public void MyDestroyMethod() {
-		System.out.println("Destroy method called ..");
+//		System.out.println("Destroy method called ..");
 	}
  
 	public void MyInitMethod() {
-		System.out.println("MyInitMethod method called ..");
+//		System.out.println("MyInitMethod method called ..");
 	}
 
 	

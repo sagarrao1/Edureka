@@ -13,10 +13,11 @@
     	<property name="pincode" value="500049"/>
     </bean>
     
-    <bean id="emp1" class="com.edurka.spring.domain.Employee" init-method="MyInitMethod" destroy-method="MyDestroyMethod">
+    <bean id="emp1" class="com.edurka.spring.domain.Employee" init-method="MyInitMethod" destroy-method="MyDestroyMethod"
+     autowire="byType">
     	<property name="id" value="1"/>
     	<property name="name" value="Sanju"/>
-    	<constructor-arg name="address" ref="addrs"/>
+    	<!-- <constructor-arg name="address" ref="addrs"/> -->
     	<!-- <property name="address" ref="addrs"/> -->
     </bean>
 
@@ -25,5 +26,17 @@
     	<property name="name" value="Sagar"/>
     	<constructor-arg name="address" ref="addrs2"/>
     </bean> -->
+    
+    <!-- Bean inheritence example -->
+    <bean id="book" class="com.edurka.spring.module.Book">
+    	<property name="bookName" value="IshaYoga"/>
+    	<property name="author" value="Sadhguru"/>
+    	<property name="noOfPages" value="200"/>
+    	<property name="cost" value="187.00"/>
+    </bean>
+    
+    <bean id="ebook" class="com.edurka.spring.module.EBook" parent="book">
+    	<property name="sizeInMb" value="500"/>    
+    </bean>
 
 </beans>
